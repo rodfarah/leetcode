@@ -8,6 +8,7 @@ Every close bracket has a corresponding open bracket of the same type.'''
 
 
 def isValid(s: str) -> bool:
+    # based on veeannzhang's solution:
     open_close = {
         '[': ']',
         '(': ')',
@@ -21,5 +22,6 @@ def isValid(s: str) -> bool:
         elif len(test) == 0 or open_close[test.pop()] != signal:
             return False
     return len(test) == 0
+
 
 print(isValid("[](){}"))
